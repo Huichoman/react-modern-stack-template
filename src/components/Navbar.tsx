@@ -55,7 +55,10 @@ export function Navbar() {
                 {currentLanguage.toUpperCase()}
               </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="bg-popover/95 backdrop-blur-sm border">
+            <DropdownMenuContent
+              align='end'
+              className='bg-popover/95 backdrop-blur-sm border'
+            >
               <DropdownMenuItem onClick={() => changeLanguage('en')}>
                 English
               </DropdownMenuItem>
