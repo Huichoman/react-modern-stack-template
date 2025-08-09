@@ -29,8 +29,7 @@
 
 ### Features & Functionality
 
-- 🌍 **react-i18next** - Internationalization (EN/ES included)
-- 🐻 **Zustand** - Lightweight state management
+- 🐻 **intlayer** - Modern, type-safe internationalization
 - 📝 **React Hook Form + Zod** - Type-safe form handling
 - 🛣️ **React Router v6** - Modern client-side routing
 
@@ -114,10 +113,12 @@
 
 The project supports English and Spanish out of the box:
 
-- Translation files: `src/locales/en.json` and `src/locales/es.json`
-- Custom hook: `src/hooks/useI18n.ts`
-- Language detection and persistence
-- Add new languages by creating new JSON files in `src/locales/`
+- **Type-safe translations**: All translations are strongly typed with auto-completion.
+- **Modern tooling**: Uses `intlayer` for a better developer experience.
+- **Content files**: Translations defined in `src/content/*.content.ts` files.
+- **Language switcher**: Included in the navbar with locale persistence.
+- **Automatic dictionary generation**: Intlayer automatically builds dictionaries during development.
+- Add new languages by editing `intlayer.config.ts` and creating new content files.
 
 ## 🎨 Theme System
 
@@ -132,27 +133,25 @@ The project supports English and Spanish out of the box:
 src/
 ├── components/          # React components
 │   ├── ui/             # shadcn/ui components
-│   ├── Layout.tsx      # Layout wrapper
-│   ├── Navbar.tsx      # Navigation component
-├── hooks/              # Custom hooks
-│   └── useI18n.ts      # i18n hook
-├── lib/                # Utilities
-│   └── utils.ts        # Tailwind utilities
-├── locales/            # Translation files
-│   ├── en.json         # English translations
-│   └── es.json         # Spanish translations
+│   └── Navbar.tsx      # Navigation component
+├── content/            # Intlayer content declarations
+│   ├── navbar.content.ts   # Navbar translations
+│   ├── home.content.ts     # Home page translations
+│   └── about.content.ts    # About page translations
+├── hooks/              # Custom React hooks
+│   └── useI18n.ts      # Internationalization hook
 ├── pages/              # Page components
 │   ├── Home.tsx        # Home page
 │   └── About.tsx       # About page
 ├── types/              # TypeScript types
 ├── App.tsx             # Main app component
-├── main.tsx            # App entry point
-└── i18n.ts             # i18n configuration
+└── main.tsx            # App entry point
 ```
 
 ## 🔧 Configuration Files
 
-- `vite.config.ts` - Vite configuration
+- `intlayer.config.ts` - Intlayer internationalization configuration
+- `vite.config.ts` - Vite configuration with intlayer plugin
 - `tailwind.config.js` - Tailwind CSS configuration
 - `tsconfig.json` - TypeScript configuration
 - `eslint.config.js` - ESLint configuration
@@ -171,7 +170,7 @@ To use this project as a template for new projects:
    - Rename `TEMPLATE_README.md` to `README.md` and fill it out for your project
    - Update repository URL in `package.json`
 4. **Customize content:**
-   - Update translations in `src/locales/`
+   - Update translations in `src/content/*.content.ts` files
    - Customize theme in `tailwind.config.js`
    - Add your routes in `src/App.tsx`
    - Create your pages in `src/pages/`
@@ -212,7 +211,7 @@ npm outdated
 - React ecosystem (react, react-dom, react-router-dom)
 - UI components (all @radix-ui components, lucide-react)
 - Styling (tailwindcss, clsx, tailwind-merge)
-- Internationalization (i18next, react-i18next)
+- Internationalization (intlayer)
 - Forms (react-hook-form, zod)
 - State management (zustand)
 - Theme (next-themes)

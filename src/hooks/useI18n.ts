@@ -1,22 +1,18 @@
-// src/hooks/useI18n.ts
-import { useTranslation } from 'react-i18next';
+import { getHTMLTextDir } from 'intlayer';
+import { useEffect } from 'react';
+import { useLocale } from 'react-intlayer';
 
-export function useI18n() {
-  const { t, i18n, ready } = useTranslation();
+export const useI18n = () => {
+  const { locale, setLocale, availableLocales } = useLocale();
 
-  const changeLanguage = async (lng: string) => {
-    try {
-      await i18n.changeLanguage(lng);
-    } catch (error) {
-      console.error('Error changing language:', error);
-    }
-  };
+  useEffect(() => {
+    document.documentElement.lang = locale;
+    document.documentElement.dir = getHTMLTextDir(locale);
+  }, [locale]);
 
   return {
-    t,
-    i18n,
-    ready,
-    changeLanguage,
-    currentLanguage: i18n.language,
+    locale,
+    setLocale,
+    availableLocales,
   };
-}
+};

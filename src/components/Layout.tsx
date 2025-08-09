@@ -1,14 +1,14 @@
+import { useI18n } from '@/hooks/useI18n';
+import { Outlet } from 'react-router-dom';
 import { Navbar } from './Navbar';
 
-interface LayoutProps {
-  children: React.ReactNode;
-}
+export function Layout() {
+  useI18n();
 
-export function Layout({ children }: LayoutProps) {
   return (
     <div className='relative flex min-h-screen flex-col'>
       <Navbar />
-      <main className='flex-1 container mx-auto py-8'>{children}</main>
+      <main className='flex-1 container mx-auto py-8'>{<Outlet />}</main>
     </div>
   );
 }

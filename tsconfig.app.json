@@ -32,6 +32,6 @@
   },
   "include": [
     "src",
-    "src/types"
+    ".intlayer/**/*.ts" // Incluir los tipos autogenerados de intlayer
   ]
 }

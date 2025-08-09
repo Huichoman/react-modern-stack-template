@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "🚀 Production-ready React template: TypeScript + Vite + Tailwind CSS + shadcn/ui + i18n + Dark Theme + Zustand + React Hook Form + CI/CD. Perfect starter for modern web apps with best practices built-in.",
+  "description": "🚀 Production-ready React template: TypeScript + Vite + Tailwind CSS + shadcn/ui + Intlayer + Dark Theme + Zustand + React Hook Form + CI/CD. Perfect starter for modern web apps with best practices built-in.",
   "keywords": [
     "react",
     "typescript",
@@ -14,8 +14,7 @@
     "template",
     "boilerplate",
     "starter",
-    "i18n",
-    "internationalization",
+    "intlayer",
     "zustand",
     "react-hook-form",
     "zod",
@@ -45,6 +44,7 @@
     "preview": "vite preview",
     "type-check": "tsc --noEmit",
     "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css,md}\"",
+    "intlayer": "intlayer",
     "format:check": "prettier --check \"src/**/*.{ts,tsx,js,jsx,json,css,md}\"",
     "clean": "rm -rf dist node_modules/.vite",
     "reset": "npm run clean && npm install"
@@ -83,16 +83,15 @@
     "cmdk": "^1.0.0",
     "date-fns": "^3.6.0",
     "embla-carousel-react": "^8.5.2",
-    "i18next": "^25.1.1",
-    "i18next-browser-languagedetector": "^8.2.0",
     "input-otp": "^1.4.2",
+    "intlayer": "^5.7.5",
     "lucide-react": "^0.475.0",
     "next-themes": "^0.4.4",
     "react": "^18.3.1",
     "react-day-picker": "^8.10.1",
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.54.2",
-    "react-i18next": "^15.5.1",
+    "react-intlayer": "^5.7.5",
     "react-resizable-panels": "^2.1.7",
     "react-router-dom": "^6.25.1",
     "recharts": "^2.15.1",
@@ -116,7 +115,8 @@
     "globals": "^15.14.0",
     "prettier": "^3.6.2",
     "typescript": "~5.7.2",
-    "typescript-eslint": "^8.22.0",
-    "vite": "^6.1.0"
+    "typescript-eslint": "^8.39.0",
+    "vite": "^6.1.0",
+    "vite-intlayer": "^5.7.5"
   }
 }
