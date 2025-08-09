@@ -5,8 +5,8 @@ import { useLocale } from 'react-intlayer';
 export const useI18n = () => {
   const { locale, setLocale, availableLocales } = useLocale();
 
-  useEffect(() => {   
-    document.documentElement.lang = locale;    
+  useEffect(() => {
+    document.documentElement.lang = locale;
     document.documentElement.dir = getHTMLTextDir(locale);
   }, [locale]);
 
