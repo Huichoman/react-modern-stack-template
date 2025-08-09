@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" class="">
-
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vite + React + TS</title>
-  <script>
-    // Apply theme before React loads to prevent flash
+  <script>    
     (function () {
       try {
         const theme = localStorage.getItem('vite-ui-theme') || 'dark';
@@ -18,14 +16,12 @@
         } else {
           document.documentElement.classList.add('light');
         }
-      } catch (e) {
-        // Fallback to dark theme if there's any error
+      } catch (e) {        
         document.documentElement.classList.add('dark');
       }
     })();
   </script>
 </head>
-
 <body>
   <div id="root"></div>
   <script type="module" src="/src/main.tsx"></script>

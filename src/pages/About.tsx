@@ -3,7 +3,6 @@ import { useI18n } from '@/hooks/useI18n';
 const About = () => {
   const { t, ready } = useI18n();
 
-  // Show loading state if i18n is not ready
   if (!ready) {
     return (
       <div className='flex items-center justify-center min-h-[200px]'>

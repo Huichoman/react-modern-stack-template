@@ -7,30 +7,35 @@
 ## 🚀 Tech Stack
 
 ### Core Technologies
+
 - ⚛️ **React 18** - Latest React with concurrent features
 - 🔷 **TypeScript** - Type safety and better DX
 - ⚡ **Vite** - Lightning-fast build tool and dev server
 - 🎨 **Tailwind CSS** - Utility-first CSS framework
 
 ### UI & Design
+
 - 🧩 **shadcn/ui** - Beautiful, accessible component library
 - 🌙 **next-themes** - Dark/Light theme with system detection
 - 📱 **Responsive Design** - Mobile-first approach
 - 🎯 **Radix UI** - Unstyled, accessible UI primitives
 
 ### Developer Experience
+
 - 🔧 **ESLint + Prettier** - Code quality and formatting
 - 🏗️ **GitHub Actions** - CI/CD pipeline included
 - 📝 **Path Aliases** - Clean imports with `@/` prefix
 - 🎪 **Hot Module Replacement** - Instant feedback
 
 ### Features & Functionality
+
 - 🌍 **react-i18next** - Internationalization (EN/ES included)
 - 🐻 **Zustand** - Lightweight state management
 - 📝 **React Hook Form + Zod** - Type-safe form handling
 - 🛣️ **React Router v6** - Modern client-side routing
 
 ### Production Ready
+
 - 🚀 **Optimized builds** - Tree-shaking and code splitting
 - 📊 **Bundle analysis** - Performance monitoring ready
 - 🔒 **Security** - Updated dependencies, no vulnerabilities
@@ -51,18 +56,21 @@
 ## � Quick Start
 
 ### Prerequisites
+
 - Node.js 20.11.0+ (see `.nvmrc`)
 - npm, yarn, or pnpm
 
 ### Installation
 
 1. **Use this template** by clicking "Use this template" on GitHub, or clone it:
+
    ```bash
    git clone <repository-url>
    cd react-modern-stack-template
    ```
 
 2. **Install dependencies:**
+
    ```bash
    npm install
    # or
@@ -72,12 +80,14 @@
    ```
 
 3. **Set up environment variables:**
+
    ```bash
    cp .env.example .env.local
    # Edit .env.local with your values
    ```
 
 4. **Start development server:**
+
    ```bash
    npm run dev
    ```
@@ -124,7 +134,6 @@ src/
 │   ├── ui/             # shadcn/ui components
 │   ├── Layout.tsx      # Layout wrapper
 │   ├── Navbar.tsx      # Navigation component
-│   └── theme-provider.tsx
 ├── hooks/              # Custom hooks
 │   └── useI18n.ts      # i18n hook
 ├── lib/                # Utilities
@@ -158,7 +167,8 @@ To use this project as a template for new projects:
 3. **Update project information:**
    - Change `name` field in `package.json`
    - Update `title` in `index.html`
-   - Modify `README.md` content
+   - Delete this `README.md`
+   - Rename `TEMPLATE_README.md` to `README.md` and fill it out for your project
    - Update repository URL in `package.json`
 4. **Customize content:**
    - Update translations in `src/locales/`
@@ -175,30 +185,6 @@ To use this project as a template for new projects:
    git commit -m "Initial commit from template"
    git push
    ```
-
-## 📦 Build & Deploy
-
-```bash
-# Build for production
-npm run build
-
-# Preview production build locally
-npm run preview
-
-# Check build size and analysis
-npm run build -- --analyze
-```
-
-### Deploy to Vercel
-```bash
-npm install -g vercel
-vercel
-```
-
-### Deploy to Netlify
-1. Build the project: `npm run build`
-2. Upload the `dist` folder to Netlify
-3. Or connect your GitHub repository to Netlify
 
 ## 🧪 Testing & Quality
 
@@ -222,6 +208,7 @@ npm outdated
 ## 📋 Dependencies Overview
 
 ### Production Dependencies
+
 - React ecosystem (react, react-dom, react-router-dom)
 - UI components (all @radix-ui components, lucide-react)
 - Styling (tailwindcss, clsx, tailwind-merge)
@@ -231,6 +218,7 @@ npm outdated
 - Theme (next-themes)
 
 ### Development Dependencies
+
 - TypeScript and types
 - Vite and plugins
 - ESLint and TypeScript ESLint
